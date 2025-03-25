@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\HomeController;
-use App\Http\Controller\ProductsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductsController;
 use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
@@ -18,7 +18,7 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 
 Route::get('/', HomeController::class );
 
-Route::prefix('/products')->controller(ProductsController::class)->group(function(){
+Route::prefix('/products')->controller( ProductsController::class)->group(function(){
     Route::get('','index');
     Route::get('/create','create');
     Route::get('/{name}/{categoria?}', 'show');
