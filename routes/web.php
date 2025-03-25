@@ -18,8 +18,8 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 
 Route::get('/', HomeController::class );
 
-route::prefix('/products')-group(function(){
-    Route::get('/products', [ProductsController::class,'index']);
-    Route::get('/products/create',  [ProductsController::class,'create']);
-    Route::get('/products/{name}/{categoria?}', [ProductsController::class,'show']);
+Route::prefix('/products')->controller(ProductsController::class)->group(function(){
+    Route::get('','index');
+    Route::get('/create','create');
+    Route::get('/{name}/{categoria?}', 'show');
 });
