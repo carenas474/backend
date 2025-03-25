@@ -1,81 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BENGOO G9000 - UNAB Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --amarillo-unab: #F9A825;
-            --naranja-unab: #FF6F00;
-            --blanco: #FFFFFF;
-            --gris: #F4F4F4;
-            --gris-claro: #E0E0E0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--gris);
-        }
-
-        .unab-header {
-            background-color: var(--amarillo-unab);
-            color: var(--blanco);
-            padding: 2rem 0;
-            border-bottom: 3px solid var(--naranja-unab);
-        }
-
-        .product-card {
-            background: var(--blanco);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .price-badge {
-            background: var(--naranja-unab);
-            color: var(--blanco);
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-        }
-
-        .color-option {
-            border: 2px solid var(--gris-claro);
-            border-radius: 8px;
-            padding: 0.5rem;
-            margin: 0.3rem;
-            cursor: pointer;
-        }
-
-        .coupon-section {
-            background: linear-gradient(45deg, var(--amarillo-unab), var(--naranja-unab));
-            color: var(--blanco);
-            border-radius: 8px;
-        }
-
-        .unab-footer {
-            background-color: var(--amarillo-unab);
-            color: var(--blanco);
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-    </style>
-</head>
-<body>
-
-<!-- Header -->
-<header class="unab-header text-center mb-4">
-    <div class="container">
-        <h1 class="display-4 fw-bold">BENGOO G9000</h1>
-        <p class="lead">Auriculares gaming premium - Tienda Oficial UNAB</p>
-    </div>
-</header>
+@extends('layout.app')
 
 <main class="container">
     <!-- Product Info Section -->
@@ -161,14 +84,4 @@
     </div>
 </main>
 
-<!-- Footer -->
-<footer class="unab-footer text-center">
-    <div class="container">
-        <p class="mb-0">© 2023 Universidad Autónoma de Bucaramanga - Tienda Oficial</p>
-        <p class="mb-0">Garantía de calidad y soporte técnico</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection
