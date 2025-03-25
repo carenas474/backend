@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\HomeController;
+use App\Http\Controller\ProductsController;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', HomeController::class );
+
+route::prefix('/products')-group(function(){
+    Route::get('/products', [ProductsController::class,'index']);
+    Route::get('/products/create',  [ProductsController::class,'create']);
+    Route::get('/products/{name}/{categoria?}', [ProductsController::class,'show']);
 });
